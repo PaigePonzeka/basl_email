@@ -192,14 +192,17 @@
 
 	/*
 	@tab Header
-	@section header text
-	@tip Set the styling for your email's header text. Choose a size and color that is easy to read.
-	*/
-		.headerContent{
-			/*@editable*/padding-top:20px;
-			/*@editable*/padding-bottom:20px;
-		}
-
+	@section the inside pitch
+	@tip set style for the inside pitch title
+	*/	
+	.headerText {
+		position: relative;
+		/*@editable*/font-size: 23px;
+		/*@editable*/color: #fff;
+		/*@editable*/font-weight: bold;
+		/*@editable*/top: 105px;
+		/*@editable*/font-family:Helvetica;
+	}	
 	/*
 	@tab Body
 	@section body style
@@ -653,10 +656,10 @@
                                     <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateHeader">
                                     	<tr>
                                         	<td align="center" valign="top">
-                                            	<table border="0" cellpadding="0" cellspacing="0" class="templateContainer">
+                                            	<table border="0" cellpadding="0" cellspacing="0" class="templateContainer" style="margin: 20px 0;">
                                                     <tr>
-                                                        <td align="center" valign="top" class="headerContent">
-                                                            <img src="https://dl.dropboxusercontent.com/u/11254480/basl-email-header.jpg" style="max-width:600px;" id="headerImage" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext>
+                                                        <td align="center" valign="top" class="headerContent" style="background: url('https://dl.dropboxusercontent.com/u/11254480/basl-banners.png') no-repeat 0 0; width: 600px; height: 138px;">
+                                                            <div class="headerText" mc:edit="header_content01"> The Inside Pitch </div>
                                                         </td>
                                                     </tr>
                                                 </table>
