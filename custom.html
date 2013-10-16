@@ -213,7 +213,7 @@
 			/*@editable*/line-height:100%;
 			/*@editable*/padding-top:20px;
 			/*@editable*/padding-right:0;
-			/*@editable*/padding-bottom:0;
+			/*@editable*/padding-bottom:20px;
 			/*@editable*/padding-left:0;
 			/*@editable*/text-align:left;
 			/*@editable*/vertical-align:middle;
@@ -239,22 +239,26 @@
 	*/
 		.templateBody{
 			/*@editable*/background-color:#ffff99;
+			/*@editable*/background-image: url(http://gallery.mailchimp.com/0d61bb2ec9002f0e9872b8c36/images/bg_copy.png);
+			/*@editable*/background-repeat: repeat-x;
+			/*@editable*/background-position: 0 bottom;
 		}
 
 		.templateBody.alt {
-			background-color: #006da0;
-			background-image: url(http://gallery.mailchimp.com/0d61bb2ec9002f0e9872b8c36/images/bg_titlebar.png);
-			background-repeat: repeat-x;
+			/*@editable*/background-color: #006da0;
+			/*@editable*/background-image: url(http://gallery.mailchimp.com/0d61bb2ec9002f0e9872b8c36/images/bg_titlebar.png);
+			/*@editable*/background-repeat: repeat-x;
+			/*@editable*/ background-position: 0 top;
 		}
 
 
 		.templateBody.alt .bodyTab {
-			background-color: #006da0;
+			/*@editable*/background-color: #006da0;
 		}
 
 		.templateBody.alt .bodyContent {
-			color: #eee;
-			font-size: 16px;
+			/*@editable*/color: #eee;
+			/*@editable*/font-size: 16px;
 		}
 
 		.bodyContentContainer{
@@ -338,7 +342,9 @@
 	@tip Set the background color for your email's column areas.
 	*/
 		.templateColumn{
-			/*@editable*/background-color:#006da0;
+			/*@editable*/background-color: #006da0;
+			/*@editable*/background-image: url(http://gallery.mailchimp.com/0d61bb2ec9002f0e9872b8c36/images/bg_titlebar.png);
+			/*@editable*/background-repeat: repeat-x;
 		}
 	/*
 	@tab Columns
@@ -725,7 +731,7 @@
                                             <td align="center" valign="top">
                                                 <table border="0" cellpadding="0" cellspacing="0" class="templateContainer">
                                                     <tr>
-                                                        <td valign="top" class="preheaderContent" style="padding-bottom: 1px" mc:edit="preheader_content00">
+                                                        <td valign="top" class="preheaderContent" style="padding-bottom: 5px" mc:edit="preheader_content00">
                                                             Use this area to offer a short teaser of your email's content. Text here will show in the preview area of some email clients.
                                                         </td>
                                                         <!-- *|IFNOT:ARCHIVE_PAGE|* -->
@@ -750,7 +756,7 @@
                                             	<table border="0" cellpadding="0" cellspacing="0" class="templateContainer">
                                                     <tr>
                                                         <td align="center" valign="top" class="headerContent">
-                                                            <img src="https://gallery.mailchimp.com/cc39b8619665e2833adc139a8/images/The_Inside_Pitch1322775205.jpg" style="max-width:600px;" id="headerImage" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext>
+                                                            <img src="https://dl.dropboxusercontent.com/u/11254480/basl-email-header.jpg" style="max-width:600px;" id="headerImage" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext>
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -766,7 +772,7 @@
 
                                     <table border="0" cellpadding="0" cellspacing="0" class="templateContainer">
                                     	<tr mc:repeatable mc:variant="full row content alt">
-                                            <td align="center" valign="top" style="padding-bottom: 1px">
+                                            <td align="center" valign="top" style="padding-bottom: 5px">
                                                 <table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateBody alt">
                                                     <tr>
                                                         <td align="center" valign="top" width="">
@@ -789,7 +795,7 @@
                                             </td>
                                         </tr>
                                         <tr mc:repeatable mc:variant="content with left image">
-                                            <td align="center" valign="top" style="padding-bottom: 1px;">
+                                            <td align="center" valign="top" style="padding-bottom: 5px;">
                                                 <table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateBody">
                                                     <tr>
                                                         <td align="center" valign="top" width="">
@@ -820,7 +826,7 @@
                                             </td>
                                         </tr>
                                         <tr mc:repeatable mc:variant="content with right image">
-                                            <td align="center" valign="top" style="padding-bottom: 1px;">
+                                            <td align="center" valign="top" style="padding-bottom: 5px;">
                                                 <table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateBody">
                                                     <tr>
                                                         <td align="center" valign="top" width="">
@@ -850,12 +856,39 @@
                                                 </table>
                                             </td>
                                         </tr>
+
+                                        <tr mc:repeatable mc:variant="single image with description">
+                                            <td align="center" valign="top" style="padding-bottom: 5px;">
+                                                <table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateBody" style="padding-top: 20px">
+                                                    <tr>
+										<td valign="top" align = "center" style="padding: 20px 0;">
+										    <img src="http://gallery.mailchimp.com/27aac8a65e64c994c4416d6b8/images/gtechbundle.jpg" style="max-width:250px;" class="bodyImage" mc:label="image" mc:edit="body_image01">
+										</td>
+									</tr>
+									<tr>
+										<td align="center" valign="top" class="bodyContent" mc:edit="body_content01">
+											<table width="500" style="margin: 0 auto;">
+												<tr>
+													<td>
+														<h2>Generitech Summer Sale</h2>
+														<strong>Introducing</strong> the Generitech Business Class Bundle. This summer, Generitech is bundling together each of the four Business Class software solution packages into one bulk pack. Now is the time to snatch up the full suite of Business Class applications for a discounted price.
+													</td>
+												</tr>		
+											</table>
+                                                      	</td>
+									</tr>
+
+
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
                                         <tr>
                                             <td align="left" valign="top">
                                                 <table align="left" border="0" cellpadding="0" cellspacing="0" class="templateColumnContainer">
                                                     <tr mc:repeatable>
-                                                    	<td align="left" valign="top" style="padding-bottom: 1px;">
-                                                            <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" class="templateColumn" style="border-right: 1px solid #003366;">
+                                                    	<td align="left" valign="top" style="padding-bottom: 5px;">
+                                                            <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" class="templateColumn" style="border-right: 5px solid #003366;">
                                                                 <tr>
                                                                     <td align="center" valign="top" width="">
                                                                         <table border="0" cellpadding="20" cellspacing="0" width="100%">
@@ -885,7 +918,7 @@
                                                 </table>
                                                 <table align="right" border="0" cellpadding="0" cellspacing="0" class="templateColumnContainer">
                                                     <tr mc:repeatable>
-                                                    	<td align="left" valign="top" style="padding-bottom: 1px;">
+                                                    	<td align="left" valign="top" style="padding-bottom: 5px;">
                                                             <table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateColumn">
                                                                 <tr>
                                                                     <td align="center" valign="top" width="">
