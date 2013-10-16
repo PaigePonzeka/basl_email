@@ -270,6 +270,8 @@
 			/*@editable*/background-color: #006da0;
 			background-image: url(https://dl.dropboxusercontent.com/u/11254480/basl_gradient.png);
 			/*@editable*/color: #eee;
+			background-repeat: repeat-x;
+			background-position: 0 bottom;
 		}
 		/*
 			@tab Ad
@@ -527,6 +529,13 @@
 			/*@editable*/max-width:250px !important;
 			/*@editable*/width:100% !important;
 		}
+		img[class=bodyImageLarge]{
+			/*@tab Mobile Styles
+@section body image
+@tip Make the body image fluid for portrait or landscape view adaptability, and set the image's original width as the max-width. If a fluid setting doesn't work, set the image width to half its original size instead.*/height:auto !important;
+			/*@editable*/max-width:360px !important;
+			/*@editable*/width:100% !important;
+		}
 
 }	@media only screen and (max-width: 480px){
 	/*
@@ -662,7 +671,7 @@
                                 	<!-- BEGIN BODY // -->
 
                                     <table border="0" cellpadding="0" cellspacing="0" class="templateContainer">
-                                    	<tr mc:repeatable mc:variant="full row content alt">
+                                    	<tr>
                                             <td align="center" valign="top" style="padding-bottom: 5px" colspan="2">
                                                 <table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateBody alt">
                                                     <tr>
@@ -672,7 +681,7 @@
                                                                     <td align="left" valign="top">
                                                                         <table border="0" cellpadding="0" cellspacing="0" class="bodyContentContainer">
                                                                             <tr>
-                                                                                <td valign="top" class="bodyContent" mc:edit="body_content00">
+                                                                                <td valign="top" class="bodyContent" mc:edit="body_content0">
                                                                                     <strong>Introducing</strong> the Generitech Business Class Bundle. This summer, Generitech is bundling together each of the four Business Class software solution packages into one bulk pack. Now is the time to snatch up the full suite of Business Class applications for a discounted price.
                                                                                 </td>
                                                                             </tr>
@@ -685,7 +694,7 @@
                                                 </table>
                                             </td>
                                         </tr>
-                                        <tr mc:repeatable mc:variant="content with left image">
+                                        <tr mc:repeatable mc:variant="content with left 250 image">
                                             <td align="center" valign="top" style="padding-bottom: 5px;" colspan="2">
                                                 <table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateBody">
                                                     <tr>
@@ -758,13 +767,13 @@
                                                                         <table align="right" border="0" cellpadding="0" cellspacing="0" class="bodyImageContainerLarge">
                                                                             <tr>
                                                                                 <td align="left" valign="top">
-                                                                                    <img src="http://placekitten.com/360/300" style="max-width:360px;" class="bodyImage" mc:label="image" mc:edit="body_image01">
+                                                                                    <img src="http://placekitten.com/360/300" style="max-width:360px;" class="bodyImageLarge" mc:label="image" mc:edit="body_image03" width="360">
                                                                                 </td>
                                                                             </tr>
                                                                         </table>
                                                                         <table align="left" border="0" cellpadding="0" cellspacing="0" class="bodyContentContainerLarge">
                                                                             <tr>
-                                                                                <td valign="top" class="bodyContent" mc:edit="body_content01">
+                                                                                <td valign="top" class="bodyContent" mc:edit="body_content03">
                                                                                     <h2>Generitech Summer Sale</h2>
                                                                                     <strong>Introducing</strong> the Generitech Business Class Bundle. This summer, Generitech is bundling together each of the four Business Class software solution packages into one bulk pack. Now is the time to snatch up the full suite of Business Class applications for a discounted price.
                                                                                 </td>
@@ -778,7 +787,7 @@
                                                 </table>
                                             </td>
                                         </tr>
-                                        <tr mc:repeatable mc:variant="content with right 360 image">
+                                        <tr mc:repeatable mc:variant="content with left 360 image">
                                             <td align="center" valign="top" style="padding-bottom: 5px;" colspan="2">
                                                 <table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateBody">
                                                     <tr>
@@ -786,16 +795,16 @@
                                                             <table border="0" cellpadding="20" cellspacing="0" width="100%">
                                                                 <tr>
                                                                     <td align="left" valign="top">
-                                                                        <table align="right" border="0" cellpadding="0" cellspacing="0" class="bodyImageContainerLarge" width="360">
+                                                                        <table align="left" border="0" cellpadding="0" cellspacing="0" class="bodyImageContainerLarge" width="360">
                                                                             <tr>
                                                                                 <td align="left" valign="top">
-                                                                                    <img src="http://placekitten.com/360/300" style="max-width:360px;" class="bodyImage" mc:label="image" mc:edit="body_image01">
+                                                                                    <img src="http://placekitten.com/360/300" style="max-width:360px;" class="bodyImageLarge" mc:label="image" mc:edit="body_image03" width="360">
                                                                                 </td>
                                                                             </tr>
                                                                         </table>
-                                                                        <table align="left" border="0" cellpadding="0" cellspacing="0" class="bodyContentContainerLarge">
+                                                                        <table align="right" border="0" cellpadding="0" cellspacing="0" class="bodyContentContainerLarge">
                                                                             <tr>
-                                                                                <td valign="top" class="bodyContent" mc:edit="body_content01">
+                                                                                <td valign="top" class="bodyContent" mc:edit="body_content03">
                                                                                     <h2>Generitech Summer Sale</h2>
                                                                                     <strong>Introducing</strong> the Generitech Business Class Bundle. This summer, Generitech is bundling together each of the four Business Class software solution packages into one bulk pack. Now is the time to snatch up the full suite of Business Class applications for a discounted price.
                                                                                 </td>
@@ -815,11 +824,11 @@
                                                 <table border="0" cellpadding="0" cellspacing="0" width="600" class="templateBody" style="padding-top: 20px">
                                                     <tr>
 																											<td valign="top" align = "center" style="padding: 20px 0;">
-																											    <img src="http://placekitten.com/600/300" style="max-width:550px;" class="bodyImage" mc:label="image" mc:edit="body_image01">
+																											    <img src="http://placekitten.com/600/300" style="max-width:550px;" class="bodyImage" mc:label="image" mc:edit="body_image04" width="600">
 																											</td>
 																										</tr>
 																										<tr>
-																											<td align="center" valign="top" class="bodyContent" mc:edit="body_content01">
+																											<td align="center" valign="top" class="bodyContent" mc:edit="body_content04">
 																												<table width="500" style="margin: 0 auto;">
 																													<tr>
 																														<td>
@@ -833,9 +842,9 @@
                                                 </table>
                                             </td>
                                         </tr>
-                                        <tr mc:repeatable mc:variant="two column ad">
-                                        	 <td align="left" valign="top" style="padding-bottom: 5px;">
-                                                <table border="0" cellpadding="0" cellspacing="0" width="295" class="templateBody templateAd" style="padding-top: 20px">
+                                        <tr mc:repeatable mc:variant="two column ad" style="padding-bottom: 5px;" >
+                                        	 <td align="left" valign="top" class="templateAd" style="border-right: 5px solid #003366;">
+                                                <table border="0" cellpadding="0" cellspacing="0" width="295" style="padding-top: 20px">
                                                     <tr>
 																											<td valign="top" align = "center" style="padding: 20px 0;">
 																											    <img src="http://gallery.mailchimp.com/27aac8a65e64c994c4416d6b8/images/gtechbundle.jpg" style="max-width:250px;" class="bodyImage" mc:label="image" mc:edit="body_image01">
@@ -855,15 +864,15 @@
 																										</tr>
                                                 </table>
                                             </td>
-                                             <td align="right" valign="top" style="padding-bottom: 5px;">
-                                                <table border="0" cellpadding="0" cellspacing="0" width="295" class="templateBody templateAd" style="padding-top: 20px">
+                                             <td align="right" valign="top" class="templateAd">
+                                                <table border="0" cellpadding="0" cellspacing="0" width="295" style="padding-top: 20px">
                                                     <tr>
 																											<td valign="top" align = "center" style="padding: 20px 0;">
-																											    <img src="http://gallery.mailchimp.com/27aac8a65e64c994c4416d6b8/images/gtechbundle.jpg" style="max-width:250px;" class="bodyImage" mc:label="image" mc:edit="body_image01">
+																											    <img src="http://gallery.mailchimp.com/27aac8a65e64c994c4416d6b8/images/gtechbundle.jpg" style="max-width:250px;" class="bodyImage" mc:label="image" mc:edit="body_image02">
 																											</td>
 																										</tr>
 																										<tr>
-																											<td align="center" valign="top" class="adContent" mc:edit="body_content01">
+																											<td align="center" valign="top" class="adContent" mc:edit="body_content02">
 																												<table width="250" style="margin: 0 auto;">
 																													<tr>
 																														<td>
