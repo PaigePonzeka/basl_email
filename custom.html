@@ -191,19 +191,6 @@
 		}
 
 	/*
-	@tab Header
-	@section the inside pitch
-	@tip set style for the inside pitch title
-	*/	
-	.headerText {
-		position: relative;
-		/*@editable*/font-size: 23px;
-		/*@editable*/color: #fff;
-		/*@editable*/font-weight: bold;
-		/*@editable*/top: 105px;
-		/*@editable*/font-family:Helvetica;
-	}	
-	/*
 	@tab Body
 	@section body style
 	@tip Set the Default background color for the sections
@@ -307,6 +294,53 @@
 		/*
 		@tab Ad
 		@section header style
+		@tip Set the h2 header style
+		*/
+		.adContent h2 {
+			/*@editable*/color: #eee !important;
+			/*@editable*/font-size: 20px;
+		}
+
+		/*
+		@tab Ad
+		@section alt ad style
+		@tip Set the background color for alt ads
+		*/
+		.templateAd.alt {
+			/*@editable*/background-color: #eee;
+			/*@editable*/color: #111;
+		}
+		/*
+		@tab Ad
+		@section alt ad style
+		@tip Set the styling for your email's ad links. Choose a color that helps them stand out from your text.
+		*/
+		.templateAd.alt  .bodyContent a:link,.templateAd.alt  .bodyContent a:visited,.templateAd.alt  .bodyContent a .yshortcuts {
+			/*@editable*/color:#111;
+		}
+
+		/*
+		@tab Ad
+		@section alt ad style
+		@tip Set the default font color for ads
+		*/
+		.templateAd.alt .adContent {
+			/*@editable*/color: #111;
+		}
+
+		/*
+		@tab Ad
+		@section alt ad style
+		@tip Set the h2 header style
+		*/
+		.templateAd.alt .adContent h2 {
+			/*@editable*/color: #111 !important;
+		}
+
+
+		/*
+		@tab Ad
+		@section ad style
 		@tip Set the h2 header style
 		*/
 		.adContent h2 {
@@ -658,8 +692,8 @@
                                         	<td align="center" valign="top">
                                             	<table border="0" cellpadding="0" cellspacing="0" class="templateContainer" style="margin: 20px 0;">
                                                     <tr>
-                                                        <td align="center" valign="top" class="headerContent" style="background: url('https://dl.dropboxusercontent.com/u/11254480/basl-banners.png') no-repeat 0 0; width: 600px; height: 138px;">
-                                                            <div class="headerText" mc:edit="header_content01"> The Inside Pitch </div>
+                                                        <td align="center" valign="top" class="headerContent">
+                                                            <img src="https://dl.dropboxusercontent.com/u/11254480/basl-banners.png" width="600" id="headerImage" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext/>
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -845,6 +879,50 @@
                                                 </table>
                                             </td>
                                         </tr>
+                                        <tr mc:repeatable mc:variant="two column ad diff" style="padding-bottom: 5px;" >
+                                        	 <td align="left" valign="top" class="templateAd" style="border-right: 5px solid #003366;">
+                                                <table border="0" cellpadding="0" cellspacing="0" width="295" style="padding-top: 20px">
+                                                    <tr>
+																											<td valign="top" align = "center" style="padding: 20px 0;">
+																											    <img src="http://gallery.mailchimp.com/27aac8a65e64c994c4416d6b8/images/gtechbundle.jpg" style="max-width:250px;" class="bodyImage" mc:label="image" mc:edit="body_image01">
+																											</td>
+																										</tr>
+																										<tr>
+																											<td align="center" valign="top" class="adContent" mc:edit="body_content01">
+																												<table width="250" style="margin: 0 auto;">
+																													<tr>
+																														<td>
+																															<h2>Generitech Summer Sale</h2>
+																															<strong>Introducing</strong> the Generitech Business Class Bundle. This summer, Generitech is bundling together each of the four Business Class software solution packages into one bulk pack. Now is the time to snatch up the full suite of Business Class applications for a discounted price.
+																														</td>
+																													</tr>		
+																												</table>
+																	                    </td>
+																										</tr>
+                                                </table>
+                                            </td>
+                                             <td align="right" valign="top" class="templateAd alt">
+                                                <table border="0" cellpadding="0" cellspacing="0" width="295" style="padding-top: 20px">
+                                                    <tr>
+																											<td valign="top" align = "center" style="padding: 20px 0;">
+																											    <img src="http://gallery.mailchimp.com/27aac8a65e64c994c4416d6b8/images/gtechbundle.jpg" style="max-width:250px;" class="bodyImage" mc:label="image" mc:edit="body_image02">
+																											</td>
+																										</tr>
+																										<tr>
+																											<td align="center" valign="top" class="adContent" mc:edit="body_content02">
+																												<table width="250" style="margin: 0 auto;">
+																													<tr>
+																														<td>
+																															<h2>Generitech Summer Sale</h2>
+																															<strong>Introducing</strong> the Generitech Business Class Bundle. This summer, Generitech is bundling together each of the four Business Class software solution packages into one bulk pack. Now is the time to snatch up the full suite of Business Class applications for a discounted price.
+																														</td>
+																													</tr>		
+																												</table>
+																	                    </td>
+																										</tr>
+                                                </table>
+                                            </td>
+                                        </tr>
                                         <tr mc:repeatable mc:variant="two column ad" style="padding-bottom: 5px;" >
                                         	 <td align="left" valign="top" class="templateAd" style="border-right: 5px solid #003366;">
                                                 <table border="0" cellpadding="0" cellspacing="0" width="295" style="padding-top: 20px">
@@ -886,6 +964,94 @@
 																												</table>
 																	                    </td>
 																										</tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr mc:repeatable mc:variant="two column ad alt" style="padding-bottom: 5px;" >
+                                        	 <td align="left" valign="top" class="templateAd alt" style="border-right: 5px solid #003366;">
+                                                <table border="0" cellpadding="0" cellspacing="0" width="295" style="padding-top: 20px">
+                                                    <tr>
+																											<td valign="top" align = "center" style="padding: 20px 0;">
+																											    <img src="http://gallery.mailchimp.com/27aac8a65e64c994c4416d6b8/images/gtechbundle.jpg" style="max-width:250px;" class="bodyImage" mc:label="image" mc:edit="body_image01">
+																											</td>
+																										</tr>
+																										<tr>
+																											<td align="center" valign="top" class="adContent" mc:edit="body_content01">
+																												<table width="250" style="margin: 0 auto;">
+																													<tr>
+																														<td>
+																															<h2>Generitech Summer Sale</h2>
+																															<strong>Introducing</strong> the Generitech Business Class Bundle. This summer, Generitech is bundling together each of the four Business Class software solution packages into one bulk pack. Now is the time to snatch up the full suite of Business Class applications for a discounted price.
+																														</td>
+																													</tr>		
+																												</table>
+																	                    </td>
+																										</tr>
+                                                </table>
+                                            </td>
+                                             <td align="right" valign="top" class="templateAd alt">
+                                                <table border="0" cellpadding="0" cellspacing="0" width="295" style="padding-top: 20px">
+                                                    <tr>
+																											<td valign="top" align = "center" style="padding: 20px 0;">
+																											    <img src="http://gallery.mailchimp.com/27aac8a65e64c994c4416d6b8/images/gtechbundle.jpg" style="max-width:250px;" class="bodyImage" mc:label="image" mc:edit="body_image02">
+																											</td>
+																										</tr>
+																										<tr>
+																											<td align="center" valign="top" class="adContent" mc:edit="body_content02">
+																												<table width="250" style="margin: 0 auto;">
+																													<tr>
+																														<td>
+																															<h2>Generitech Summer Sale</h2>
+																															<strong>Introducing</strong> the Generitech Business Class Bundle. This summer, Generitech is bundling together each of the four Business Class software solution packages into one bulk pack. Now is the time to snatch up the full suite of Business Class applications for a discounted price.
+																														</td>
+																													</tr>		
+																												</table>
+																	                    </td>
+																										</tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr mc:repeatable mc:variant="two column ad diff alt" style="padding-bottom: 5px;" >
+                                        	 <td align="left" valign="top" class="templateAd alt" style="border-right: 5px solid #003366;">
+                                                <table border="0" cellpadding="0" cellspacing="0" width="295" style="padding-top: 20px">
+                                                    <tr>
+										<td valign="top" align = "center" style="padding: 20px 0;">
+										    <img src="http://gallery.mailchimp.com/27aac8a65e64c994c4416d6b8/images/gtechbundle.jpg" style="max-width:250px;" class="bodyImage" mc:label="image" mc:edit="body_image01">
+										</td>
+									</tr>
+									<tr>
+										<td align="center" valign="top" class="adContent" mc:edit="body_content01">
+											<table width="250" style="margin: 0 auto;">
+												<tr>
+													<td>
+														<h2>Generitech Summer Sale</h2>
+														<strong>Introducing</strong> the Generitech Business Class Bundle. This summer, Generitech is bundling together each of the four Business Class software solution packages into one bulk pack. Now is the time to snatch up the full suite of Business Class applications for a discounted price.
+													</td>
+												</tr>		
+											</table>
+                    							</td>
+									</tr>
+                                                </table>
+                                            </td>
+                                             <td align="right" valign="top" class="templateAd">
+                                                <table border="0" cellpadding="0" cellspacing="0" width="295" style="padding-top: 20px">
+                                                    <tr>
+										<td valign="top" align = "center" style="padding: 20px 0;">
+										    <img src="http://gallery.mailchimp.com/27aac8a65e64c994c4416d6b8/images/gtechbundle.jpg" style="max-width:250px;" class="bodyImage" mc:label="image" mc:edit="body_image02">
+										</td>
+									</tr>
+									<tr>
+										<td align="center" valign="top" class="adContent" mc:edit="body_content02">
+											<table width="250" style="margin: 0 auto;">
+												<tr>
+													<td>
+														<h2>Generitech Summer Sale</h2>
+														<strong>Introducing</strong> the Generitech Business Class Bundle. This summer, Generitech is bundling together each of the four Business Class software solution packages into one bulk pack. Now is the time to snatch up the full suite of Business Class applications for a discounted price.
+													</td>
+												</tr>		
+											</table>
+                    							</td>
+									</tr>
                                                 </table>
                                             </td>
                                         </tr>
