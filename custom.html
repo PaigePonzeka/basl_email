@@ -197,9 +197,8 @@
 	*/
 		.templateBody{
 			/*@editable*/background-color:#ffff99;
-			background-image: url(https://dl.dropboxusercontent.com/u/11254480/basl_gradient.png);
+			background-image: url(http://gallery.mailchimp.com/cc39b8619665e2833adc139a8/images/basl_gradient.1.png);
 			background-repeat: repeat-x;
-			background-position: 0 bottom;
 		}
 		/*
 			@tab Body
@@ -227,7 +226,7 @@
 		*/
 		.templateBody.alt {
 			/*@editable*/background-color: #006da0;
-			background-image: url(https://dl.dropboxusercontent.com/u/11254480/basl_gradient.png);
+			background-image: url(http://gallery.mailchimp.com/cc39b8619665e2833adc139a8/images/basl_gradient.1.png);
 		}
 
 		/*
@@ -258,10 +257,9 @@
 		*/
 		.templateAd {
 			/*@editable*/background-color: #006da0;
-			background-image: url(https://dl.dropboxusercontent.com/u/11254480/basl_gradient.png);
+			background-image: url(http://gallery.mailchimp.com/cc39b8619665e2833adc139a8/images/basl_gradient.1.png);
 			/*@editable*/color: #eee;
 			background-repeat: repeat-x;
-			background-position: 0 bottom;
 		}
 		/*
 			@tab Ad
@@ -463,6 +461,10 @@
 @section template width
 @tip Make the template fluid for portrait or landscape view adaptability. If a fluid layout doesn't work for you, set the width to 300px instead.*/max-width:600px !important;
 			/*@editable*/width:100% !important;
+		}
+
+		.templateAd, .templateBody.alt, .templateBody {
+			background-image: none;
 		}
 
 }	@media only screen and (max-width: 480px){
@@ -693,7 +695,7 @@
                                             	<table border="0" cellpadding="0" cellspacing="0" class="templateContainer" style="margin: 20px 0;">
                                                     <tr>
                                                         <td align="center" valign="top" class="headerContent">
-                                                            <img src="https://dl.dropboxusercontent.com/u/11254480/basl-banners.png" width="600" id="headerImage" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext/>
+                                                            <img src="http://gallery.mailchimp.com/cc39b8619665e2833adc139a8/images/Inside_Pitch_Banner_2.JPG" width="600" id="headerImage" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext/>
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -879,9 +881,9 @@
                                                 </table>
                                             </td>
                                         </tr>
-                                        <tr mc:repeatable mc:variant="two column ad diff" style="padding-bottom: 5px;" >
-                                        	 <td align="left" valign="top" class="templateAd" style="border-right: 5px solid #003366;">
-                                                <table border="0" cellpadding="0" cellspacing="0" width="295" style="padding-top: 20px">
+                                        <tr mc:repeatable mc:variant="two column ad diff">
+                                        	 <td align="left" valign="top" style="padding-bottom: 5px;">
+                                                <table class="templateAd" border="0" cellpadding="0" cellspacing="0" width="295" style="padding-top: 20px">
                                                     <tr>
 																											<td valign="top" align = "center" style="padding: 20px 0;">
 																											    <img src="http://gallery.mailchimp.com/27aac8a65e64c994c4416d6b8/images/gtechbundle.jpg" style="max-width:250px;" class="bodyImage" mc:label="image" mc:edit="body_image01">
@@ -901,8 +903,8 @@
 																										</tr>
                                                 </table>
                                             </td>
-                                             <td align="right" valign="top" class="templateAd alt">
-                                                <table border="0" cellpadding="0" cellspacing="0" width="295" style="padding-top: 20px">
+                                             <td align="right" valign="top">
+                                                <table class="templateAd alt" border="0" cellpadding="0" cellspacing="0" width="295" style="padding-top: 20px">
                                                     <tr>
 																											<td valign="top" align = "center" style="padding: 20px 0;">
 																											    <img src="http://gallery.mailchimp.com/27aac8a65e64c994c4416d6b8/images/gtechbundle.jpg" style="max-width:250px;" class="bodyImage" mc:label="image" mc:edit="body_image02">
@@ -923,9 +925,9 @@
                                                 </table>
                                             </td>
                                         </tr>
-                                        <tr mc:repeatable mc:variant="two column ad" style="padding-bottom: 5px;" >
-                                        	 <td align="left" valign="top" class="templateAd" style="border-right: 5px solid #003366;">
-                                                <table border="0" cellpadding="0" cellspacing="0" width="295" style="padding-top: 20px">
+                                        <tr mc:repeatable mc:variant="two column ad">
+                                        	 <td align="left" valign="top" style="padding-bottom: 5px;">
+                                                <table class="templateAd" border="0" cellpadding="0" cellspacing="0" width="295" style="padding-top: 20px">
                                                     <tr>
 																											<td valign="top" align = "center" style="padding: 20px 0;">
 																											    <img src="http://gallery.mailchimp.com/27aac8a65e64c994c4416d6b8/images/gtechbundle.jpg" style="max-width:250px;" class="bodyImage" mc:label="image" mc:edit="body_image01">
@@ -945,8 +947,8 @@
 																										</tr>
                                                 </table>
                                             </td>
-                                             <td align="right" valign="top" class="templateAd">
-                                                <table border="0" cellpadding="0" cellspacing="0" width="295" style="padding-top: 20px">
+                                             <td align="right" valign="top">
+                                                <table class="templateAd" border="0" cellpadding="0" cellspacing="0" width="295" style="padding-top: 20px">
                                                     <tr>
 																											<td valign="top" align = "center" style="padding: 20px 0;">
 																											    <img src="http://gallery.mailchimp.com/27aac8a65e64c994c4416d6b8/images/gtechbundle.jpg" style="max-width:250px;" class="bodyImage" mc:label="image" mc:edit="body_image02">
@@ -967,9 +969,9 @@
                                                 </table>
                                             </td>
                                         </tr>
-                                        <tr mc:repeatable mc:variant="two column ad alt" style="padding-bottom: 5px;" >
-                                        	 <td align="left" valign="top" class="templateAd alt" style="border-right: 5px solid #003366;">
-                                                <table border="0" cellpadding="0" cellspacing="0" width="295" style="padding-top: 20px">
+                                        <tr mc:repeatable mc:variant="two column ad alt">
+                                        	 <td align="left" valign="top" style="padding-bottom: 5px;">
+                                                <table border="0" class="templateAd alt" cellpadding="0" cellspacing="0" width="295" style="padding-top: 20px">
                                                     <tr>
 																											<td valign="top" align = "center" style="padding: 20px 0;">
 																											    <img src="http://gallery.mailchimp.com/27aac8a65e64c994c4416d6b8/images/gtechbundle.jpg" style="max-width:250px;" class="bodyImage" mc:label="image" mc:edit="body_image01">
@@ -989,8 +991,8 @@
 																										</tr>
                                                 </table>
                                             </td>
-                                             <td align="right" valign="top" class="templateAd alt">
-                                                <table border="0" cellpadding="0" cellspacing="0" width="295" style="padding-top: 20px">
+                                             <td align="right" valign="top">
+                                                <table class="templateAd alt" border="0" cellpadding="0" cellspacing="0" width="295" style="padding-top: 20px">
                                                     <tr>
 																											<td valign="top" align = "center" style="padding: 20px 0;">
 																											    <img src="http://gallery.mailchimp.com/27aac8a65e64c994c4416d6b8/images/gtechbundle.jpg" style="max-width:250px;" class="bodyImage" mc:label="image" mc:edit="body_image02">
@@ -1011,47 +1013,47 @@
                                                 </table>
                                             </td>
                                         </tr>
-                                        <tr mc:repeatable mc:variant="two column ad diff alt" style="padding-bottom: 5px;" >
-                                        	 <td align="left" valign="top" class="templateAd alt" style="border-right: 5px solid #003366;">
-                                                <table border="0" cellpadding="0" cellspacing="0" width="295" style="padding-top: 20px">
+                                        <tr mc:repeatable mc:variant="two column ad diff alt">
+                                        	 <td align="left" valign="top"  style="padding-bottom: 5px;" >
+                                                <table class="templateAd alt" border="0" cellpadding="0" cellspacing="0" width="295" style="padding-top: 20px">
                                                     <tr>
-										<td valign="top" align = "center" style="padding: 20px 0;">
-										    <img src="http://gallery.mailchimp.com/27aac8a65e64c994c4416d6b8/images/gtechbundle.jpg" style="max-width:250px;" class="bodyImage" mc:label="image" mc:edit="body_image01">
-										</td>
-									</tr>
-									<tr>
-										<td align="center" valign="top" class="adContent" mc:edit="body_content01">
-											<table width="250" style="margin: 0 auto;">
-												<tr>
-													<td>
-														<h2>Generitech Summer Sale</h2>
-														<strong>Introducing</strong> the Generitech Business Class Bundle. This summer, Generitech is bundling together each of the four Business Class software solution packages into one bulk pack. Now is the time to snatch up the full suite of Business Class applications for a discounted price.
-													</td>
-												</tr>		
-											</table>
-                    							</td>
-									</tr>
+																											<td valign="top" align = "center" style="padding: 20px 0;">
+																											    <img src="http://gallery.mailchimp.com/27aac8a65e64c994c4416d6b8/images/gtechbundle.jpg" style="max-width:250px;" class="bodyImage" mc:label="image" mc:edit="body_image01">
+																											</td>
+																										</tr>
+																										<tr>
+																											<td align="center" valign="top" class="adContent" mc:edit="body_content01">
+																												<table width="250" style="margin: 0 auto;">
+																													<tr>
+																														<td>
+																															<h2>Generitech Summer Sale</h2>
+																															<strong>Introducing</strong> the Generitech Business Class Bundle. This summer, Generitech is bundling together each of the four Business Class software solution packages into one bulk pack. Now is the time to snatch up the full suite of Business Class applications for a discounted price.
+																														</td>
+																													</tr>		
+																												</table>
+																	                	</td>
+																									</tr>
                                                 </table>
                                             </td>
-                                             <td align="right" valign="top" class="templateAd">
-                                                <table border="0" cellpadding="0" cellspacing="0" width="295" style="padding-top: 20px">
+                                             <td align="right" valign="top">
+                                                <table class="templateAd" border="0" cellpadding="0" cellspacing="0" width="295" style="padding-top: 20px">
                                                     <tr>
-										<td valign="top" align = "center" style="padding: 20px 0;">
-										    <img src="http://gallery.mailchimp.com/27aac8a65e64c994c4416d6b8/images/gtechbundle.jpg" style="max-width:250px;" class="bodyImage" mc:label="image" mc:edit="body_image02">
-										</td>
-									</tr>
-									<tr>
-										<td align="center" valign="top" class="adContent" mc:edit="body_content02">
-											<table width="250" style="margin: 0 auto;">
-												<tr>
-													<td>
-														<h2>Generitech Summer Sale</h2>
-														<strong>Introducing</strong> the Generitech Business Class Bundle. This summer, Generitech is bundling together each of the four Business Class software solution packages into one bulk pack. Now is the time to snatch up the full suite of Business Class applications for a discounted price.
-													</td>
-												</tr>		
-											</table>
-                    							</td>
-									</tr>
+																											<td valign="top" align = "center" style="padding: 20px 0;">
+																											    <img src="http://gallery.mailchimp.com/27aac8a65e64c994c4416d6b8/images/gtechbundle.jpg" style="max-width:250px;" class="bodyImage" mc:label="image" mc:edit="body_image02">
+																											</td>
+																										</tr>
+																										<tr>
+																											<td align="center" valign="top" class="adContent" mc:edit="body_content02">
+																												<table width="250" style="margin: 0 auto;">
+																													<tr>
+																														<td>
+																															<h2>Generitech Summer Sale</h2>
+																															<strong>Introducing</strong> the Generitech Business Class Bundle. This summer, Generitech is bundling together each of the four Business Class software solution packages into one bulk pack. Now is the time to snatch up the full suite of Business Class applications for a discounted price.
+																														</td>
+																													</tr>		
+																												</table>
+                    																	</td>
+																										</tr>
                                                 </table>
                                             </td>
                                         </tr>
