@@ -29,7 +29,6 @@
 		body{
 			margin:0;
 			padding:0;
-			
 		}
 		img{
 			border:0;
@@ -63,8 +62,8 @@
 	@theme page
 	*/
 		body,#bodyTable{
-			/*@editable*/background-color: #3d3d3d;
-			/*@editable*/background-image: url(snowflakes-blue.jpg);
+			/*@editable*/background-color: #224074;
+			/*@editable*/ background-image: url(http://gallery.mailchimp.com/cc39b8619665e2833adc139a8/images/flakes.gif);
 			background-repeat: repeat;
 			height: 100%;
 			margin: 0;
@@ -78,7 +77,7 @@
 	@style heading 1
 	*/
 		h1{
-			/*@editable*/color:#269BFF !important;
+			/*@editable*/color:#D7E5FF;
 			display:block;
 			/*@editable*/font-family:Helvetica;
 			/*@editable*/font-size:23px;
@@ -99,7 +98,7 @@
 	@style heading 2
 	*/
 		h2{
-			/*@editable*/color:#404040 !important;
+			/*@editable*/color:#D7E5FF;
 			display:block;
 			/*@editable*/font-family:Helvetica;
 			/*@editable*/font-size:20px;
@@ -120,7 +119,7 @@
 	@style heading 3
 	*/
 		h3{
-			/*@editable*/color:#606060 !important;
+			/*@editable*/color:#D7E5FF;
 			display:block;
 			/*@editable*/font-family:Helvetica;
 			/*@editable*/font-size:16px;
@@ -141,7 +140,7 @@
 	@style heading 4
 	*/
 		h4{
-			/*@editable*/color:#808080 !important;
+			/*@editable*/color:#D7E5FF;
 			display:block;
 			/*@editable*/font-family:Helvetica;
 			/*@editable*/font-size:14px;
@@ -162,7 +161,7 @@
 	@theme header
 	*/
 		#templatePreheader{
-			/*@editable*/background-color:#006da0;
+			/*@editable*/background-color:#224074;
 			/*@editable*/border-top:0;
 			/*@editable*/border-bottom:0;
 		}
@@ -197,8 +196,8 @@
 	@tip Set the Default background color for the sections
 	*/
 		.templateBody{
-			/*@editable*/background-color:#ffff99;
-			background-image: url(http://gallery.mailchimp.com/cc39b8619665e2833adc139a8/images/basl_gradient.1.png);
+			/*@editable*/background-color:#224074;
+			/*@editable*/border: 3px solid #D7D459;
 			background-repeat: repeat-x;
 		}
 		/*
@@ -207,7 +206,7 @@
 			@tip Set the Default font color for body sections
 		*/
 		.templateBody .bodyContent {
-			/*@editable*/color: #505050;
+			/*@editable*/color: #D7E5FF;
 			/*@editable*/font-size: 14px;
 		}
 
@@ -217,7 +216,7 @@
 			@tip Set the Default font color for body sections
 		*/
 		.templateBody .bodyContent a {
-			/*@editable*/color: #000;
+			/*@editable*/color: #D7E5FF;
 		}
 
 		/*
@@ -226,8 +225,8 @@
 		@tip Set the Alternative background color for the sections 
 		*/
 		.templateBody.alt {
-			/*@editable*/background-color: #006da0;
-			background-image: url(http://gallery.mailchimp.com/cc39b8619665e2833adc139a8/images/basl_gradient.1.png);
+			/*@editable*/background: #fff;
+			border: none;
 		}
 
 		/*
@@ -236,7 +235,7 @@
 		@tip Set the Alternative font color and size
 		*/
 		.templateBody.alt .bodyContent {
-			/*@editable*/color: #eee;
+			/*@editable*/color:#000;
 			/*@editable*/font-size: 16px;
 		}
 
@@ -257,9 +256,9 @@
 		@tip Set the background color for ads
 		*/
 		.templateAd {
-			/*@editable*/background-color: #006da0;
-			background-image: url(http://gallery.mailchimp.com/cc39b8619665e2833adc139a8/images/basl_gradient.1.png);
-			/*@editable*/color: #eee;
+			/*@editable*/background-color: #496597;
+			/*@editable*/color: #efefef;
+			/*@editable*/border: 3px solid #D7D459;
 			background-repeat: repeat-x;
 		}
 		/*
@@ -296,7 +295,7 @@
 		@tip Set the h2 header style
 		*/
 		.adContent h2 {
-			/*@editable*/color: #eee !important;
+			/*@editable*/color: #eee;
 			/*@editable*/font-size: 20px;
 		}
 
@@ -306,7 +305,7 @@
 		@tip Set the background color for alt ads
 		*/
 		.templateAd.alt {
-			/*@editable*/background-color: #eee;
+			/*@editable*/background-color: #CEDEFF;
 			/*@editable*/color: #111;
 		}
 		/*
@@ -333,7 +332,7 @@
 		@tip Set the h2 header style
 		*/
 		.templateAd.alt .adContent h2 {
-			/*@editable*/color: #111 !important;
+			/*@editable*/color: #111;
 		}
 
 
@@ -343,7 +342,7 @@
 		@tip Set the h2 header style
 		*/
 		.adContent h2 {
-			/*@editable*/color: #eee !important;
+			/*@editable*/color: #eee;
 			/*@editable*/font-size: 20px;
 		}
 
@@ -420,14 +419,12 @@
 	@theme footer
 	*/
 		.footerContent{
-			/*@editable*/color:#CDD0D5;
+			/*@editable*/color: #000;
+			/*@editable*/background: #fff;
 			font-family:Helvetica;
 			font-size:10px;
 			line-height:150%;
-			padding-top:20px;
-			padding-right:0;
-			padding-bottom:20px;
-			padding-left:0;
+			padding: 20px;
 			text-align:left;
 		}
 	/*
@@ -436,7 +433,7 @@
 	@tip Set the styling for your email's footer links. Choose a color that helps them stand out from your text.
 	*/
 		.footerContent a:link,.footerContent a:visited,.footerContent a .yshortcuts,.footerContent a span {
-			/*@editable*/color:#CDD0D5;
+			/*@editable*/color:#222;
 			font-weight:normal;
 			text-decoration:underline;
 		}
@@ -696,7 +693,7 @@
                                             	<table border="0" cellpadding="0" cellspacing="0" class="templateContainer" style="margin: 20px 0;">
                                                     <tr>
                                                         <td align="center" valign="top" class="headerContent">
-											<img src="http://gallery.mailchimp.com/cc39b8619665e2833adc139a8/images/Inside_Pitch_Banner_2.JPG" width="600" id="headerImage" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext/>
+											<img src="http://gallery.mailchimp.com/cc39b8619665e2833adc139a8/images/basl_snow_bg.gif" width="600" id="headerImage" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext/>
                                                           </td>
                                                     </tr>
                                                 </table>
