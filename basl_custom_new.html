@@ -33,8 +33,30 @@
 			*/
 			body, #bodyTable{
 				/*@editable*/ background-color:#DEE0E2;
+				/*@editable*/ background-image: url('https://dl.dropboxusercontent.com/u/11254480/email/email-bg.png');
+				/*@editable*/ background-repeat: repeat;
 			}
 
+			.border-color {
+				/*@editable*/ border-color: #F3F315;
+				/*@editable*/ border-size: 3px;
+			}
+
+			.border-top {
+				border-top-style: solid;
+			}
+
+			.border-bottom {
+				border-bottom-style: solid;
+			}
+
+			.border-left {
+				border-left-style: solid;
+			}
+
+			.border-right {
+				border-right-style: solid;
+			}
 			/**
 			* @tab Page
 			* @section background style
@@ -51,7 +73,7 @@
 			* @tip Set the border for your email.
 			*/
 			#templateContainer{
-				/*@editable*/ border:1px solid #BBBBBB;
+				border-top: none;
 			}
 
 			/**
@@ -181,18 +203,6 @@
 
 			/**
 			* @tab Header
-			* @section header style
-			* @tip Set the background color and borders for your email's header area.
-			* @theme header
-			*/
-			#templateHeader{
-				/*@editable*/ background-color:#F4F4F4;
-				/*@editable*/ border-top:1px solid #FFFFFF;
-				/*@editable*/ border-bottom:1px solid #CCCCCC;
-			}
-
-			/**
-			* @tab Header
 			* @section header text
 			* @tip Set the styling for your email's header text. Choose a size and color that is easy to read.
 			*/
@@ -294,9 +304,34 @@
 			*/
 			#templateColumns{
 				/*@editable*/ background-color:#F4F4F4;
-				/*@editable*/ border-top:1px solid #FFFFFF;
+				/*@editableborder-top:1px solid #FFFFFF;*/
 				/*@editable*/ border-bottom:1px solid #CCCCCC;
 			}
+
+			.templateColumn,
+			.column {
+				/*@editable*/ border-bottom:1px solid #CCCCCC;
+				/*border-collapse: seperate !important;*/
+			}
+
+			.fullWidthTable {
+				padding: 20px;
+				/*@editable*/ border-top:1px solid #FFFFFF;
+				display: block;
+			}
+
+			.fullWidthTemplateColumn .fullWidthTemplateColumnContainer {
+				padding: 0;
+			}
+
+			.fullWidthImageContent {
+				padding: 0;
+			}
+
+			.fullWidthBodyContent {
+				padding: 20px;
+			}
+
 
 			/**
 			* @tab Columns
@@ -599,24 +634,6 @@
                     	<table border="0" cellpadding="0" cellspacing="0" id="templateContainer">
                         	<tr>
                             	<td align="center" valign="top">
-                                	<!-- BEGIN PREHEADER // -->
-                                    <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templatePreheader">
-                                        <tr>
-                                            <td valign="top" class="preheaderContent" style="padding-top:10px; padding-right:20px; padding-bottom:10px; padding-left:20px;" mc:edit="preheader_content00">
-                                                Use this area to offer a short teaser of your email's content. Text here will show in the preview area of some email clients.
-                                            </td>
-                                            <!-- *|IFNOT:ARCHIVE_PAGE|* -->
-                                            <td valign="top" width="180" class="preheaderContent" style="padding-top:10px; padding-right:20px; padding-bottom:10px; padding-left:0;" mc:edit="preheader_content01">
-                                                Email not displaying correctly?<br /><a href="*|ARCHIVE|*" target="_blank">View it in your browser</a>.
-                                            </td>
-                                            <!-- *|END:IF|* -->
-                                        </tr>
-                                    </table>
-                                    <!-- // END PREHEADER -->
-                                </td>
-                            </tr>
-                        	<tr>
-                            	<td align="center" valign="top">
                                 	<!-- BEGIN HEADER // -->
                                     <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateHeader">
                                         <tr>
@@ -628,7 +645,7 @@
                                     <!-- // END HEADER -->
                                 </td>
                             </tr>
-                        	<tr>
+                        	<tr class="border-color border-top border-left border-right">
                             	<td align="center" valign="top">
                                 	<!-- BEGIN BODY // -->
                                     <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody">
@@ -643,54 +660,61 @@
                                     <!-- // END BODY -->
                                 </td>
                             </tr>
-                        	<tr>
+                        	<tr class="border-color border-left border-right">
                             	<td align="center" valign="top">
                                 	<!-- BEGIN COLUMNS // -->
                                     <table border="0" cellpadding="20" cellspacing="0" width="100%" id="templateColumns">
-                                    	<tr mc:repeatable mc:variant="2x260">
-                                        	<td align="left" valign="top" style="padding-bottom:0;">
-                                            	<table align="left" border="0" cellpadding="0" cellspacing="0" class="templateColumnContainer">
-                                                	<tr>
-                                                    	<td class="leftColumnContent columnContent columnImageContent">
-                                                        	<img src="http://placehold.it/260x250" style="max-width:260px;" class="columnImage" mc:label="left_column_image" mc:edit="left_column_image" mc:hideable/>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                    	<td valign="top" class="leftColumnContent columnContent">
-                                                            <h3 mc:edit="left_column_title" mc:hideable>Lorem ipsum dolor sit amet</h3>
-                                                            <div class="body-section" mc:edit="left_column_body"> 
-                                                            	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac ipsum a dolor venenatis sodales. Ut sed mollis quam, non lobortis magna. Ut risus mauris, posuere in tortor id, lobortis congue magna. Morbi cursus dictum dolor sed venenatis. Donec dignissim sit amet neque ac mattis. Aenean commodo, tellus commodo dictum pulvinar, odio purus vestibulum nunc, in faucibus lorem mi ut neque. 
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            	<table align="right" border="0" cellpadding="0" cellspacing="0" class="templateColumnContainer">
-                                                	<tr>
-                                                    	<td class="rightColumnContent columnContent columnImageContent">
-                                                        	<img src="http://placehold.it/260x250" style="max-width:260px;" class="columnImage" mc:label="right_column_image" mc:edit="right_column_image" mc:hideable/>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                    	<td valign="top" class="rightColumnContent columnContent">
-                                                            <h3 mc:edit="right_column_title" mc:hideable>Lorem ipsum dolor sit amet</h3>
-                                                            <div class="body-section" mc:edit="right_column_body"> 
-	                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac ipsum a dolor venenatis sodales. Ut sed mollis quam, non lobortis magna. Ut risus mauris, posuere in tortor id, lobortis congue magna. Morbi cursus dictum dolor sed venenatis. Donec dignissim sit amet neque ac mattis. Aenean commodo, tellus commodo dictum pulvinar, odio purus vestibulum nunc, in faucibus lorem mi ut neque. 
-                                                          	</div>
-                                                        </td>
-                                                    </tr>
-                                                </table>
+                                    	<tr mc:repeatable mc:variant="2x260" class="templateColumn">
+                                        	<td align="left" valign="top" style="padding:0;">
+                                        		<table style="width: 100%">
+                                        			<tr>
+                                        				<td style="padding: 20px;"> 
+                                        					<table align="left" border="0" cellpadding="0" cellspacing="0" class="templateColumnContainer">
+				                                                	<tr>
+				                                                    	<td class="leftColumnContent columnContent columnImageContent">
+				                                                        	<img src="http://placehold.it/260x250" style="max-width:260px;" class="columnImage" mc:label="left_column_image" mc:edit="left_column_image" mc:hideable/>
+				                                                        </td>
+				                                                    </tr>
+				                                                    <tr>
+				                                                    	<td valign="top" class="leftColumnContent columnContent">
+				                                                            <h3 mc:edit="left_column_title" mc:hideable>Lorem ipsum dolor sit amet</h3>
+				                                                            <div class="body-section" mc:edit="left_column_body"> 
+				                                                            	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac ipsum a dolor venenatis sodales. Ut sed mollis quam, non lobortis magna. Ut risus mauris, posuere in tortor id, lobortis congue magna. Morbi cursus dictum dolor sed venenatis. Donec dignissim sit amet neque ac mattis. Aenean commodo, tellus commodo dictum pulvinar, odio purus vestibulum nunc, in faucibus lorem mi ut neque. 
+				                                                            </div>
+				                                                        </td>
+				                                                    </tr>
+                                                				</table>
+				                                            	<table align="right" border="0" cellpadding="0" cellspacing="0" class="templateColumnContainer">
+				                                                	<tr>
+				                                                    	<td class="rightColumnContent columnContent columnImageContent">
+				                                                        	<img src="http://placehold.it/260x250" style="max-width:260px;" class="columnImage" mc:label="right_column_image" mc:edit="right_column_image" mc:hideable/>
+				                                                        </td>
+				                                                    </tr>
+				                                                    <tr>
+				                                                    	<td valign="top" class="rightColumnContent columnContent">
+				                                                            <h3 mc:edit="right_column_title" mc:hideable>Lorem ipsum dolor sit amet</h3>
+				                                                            <div class="body-section" mc:edit="right_column_body"> 
+					                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac ipsum a dolor venenatis sodales. Ut sed mollis quam, non lobortis magna. Ut risus mauris, posuere in tortor id, lobortis congue magna. Morbi cursus dictum dolor sed venenatis. Donec dignissim sit amet neque ac mattis. Aenean commodo, tellus commodo dictum pulvinar, odio purus vestibulum nunc, in faucibus lorem mi ut neque. 
+				                                                          	</div>
+				                                                        </td>
+				                                                    </tr>
+				                                             </table>
+                                        				</td>
+                                        			</tr>
+                                        		</table>
+                                           
                                             </td>
                                       </tr>
-                                      <tr mc:repeatable mc:variant="1x500">
-                                        	<td valign="top">
-                                            	<table  border="0" cellpadding="0" cellspacing="0" class="templateColumnContainer">
+                                      <tr mc:repeatable mc:variant="1x500" class="fullWidthTemplateColumn column">
+                                        	<td valign="top" class="fullWidthTemplateColumnContainer">
+                                            	<table  border="0" cellpadding="0" cellspacing="0" class="fullWidthTable">
                                                 	<tr>
-                                                    	<td class="columnContent singleColumnImage columnImageContent">
-                                                        	<img src="http://placehold.it/500x250" style="max-width:100%; margin: 0 auto;" mc:label="left_column_image" mc:edit="center_column_image" mc:hideable/>
+                                                    	<td class="columnContent singleColumnImage fullWidthImageContent ">
+                                                        	<img src="http://placehold.it/560x250" style="max-width:100%; margin: 0 auto;" mc:label="left_column_image" mc:edit="center_column_image" mc:hideable/>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                    	<td valign="top" class="leftColumnContent">
+                                                    	<td valign="top" class="leftColumnContent fullWidthBodyContent">
                                                             <h3 mc:edit="center_column_title" mc:hideable>Lorem ipsum dolor sit amet</h3>
                                                             <div class="body-section" mc:edit="center_column_body"> 
                                                             	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac ipsum a dolor venenatis sodales. Ut sed mollis quam, non lobortis magna. Ut risus mauris, posuere in tortor id, lobortis congue magna. Morbi cursus dictum dolor sed venenatis. Donec dignissim sit amet neque ac mattis. Aenean commodo, tellus commodo dictum pulvinar, odio purus vestibulum nunc, in faucibus lorem mi ut neque. 
@@ -700,108 +724,104 @@
                                                 </table>
                                             </td>
                                       </tr>
-                                     <tr mc:repeatable mc:variant="1x260 Left">
-                                        	<td align="left" valign="top" style="padding-bottom:0;">
-                                            	<table align="left" border="0" cellpadding="0" cellspacing="0" class="templateColumnContainer">
+                                     <tr mc:repeatable mc:variant="1x260 Left" class="templateColumn column">
+                                     	<td style="padding: 0;">
+                                     		<table style="width:100%; border-top: 1px solid #fff;">
+                                     			<tr>
+                                     				<td align="left" valign="top" style="padding: 20px;">
+                                            				<table align="left" border="0" cellpadding="0" cellspacing="0" class="templateColumnContainer">
+			                                                	<tr>
+			                                                    	<td class="leftColumnContent columnContent columnImageContent">
+			                                                        	<img src="http://placehold.it/260x250" style="max-width:260px;" class="columnImage" mc:label="left_column_image" mc:edit="left_column_image" mc:hideable/>
+			                                                        </td>
+			                                                    </tr>
+                                                			</table>
+			                                            	<table align="right" border="0" cellpadding="0" cellspacing="0" class="templateColumnContainer">
+			                                                    <tr>
+			                                                    	<td valign="top" class="rightColumnContent columnContent">
+			                                                            <h3 mc:edit="right_column_title" mc:hideable>Lorem ipsum dolor sit amet</h3>
+			                                                            <div class="body-section" mc:edit="right_column_body"> 
+				                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac ipsum a dolor venenatis sodales. Ut sed mollis quam, non lobortis magna. Ut risus mauris, posuere in tortor id, lobortis congue magna. Morbi cursus dictum dolor sed venenatis. Donec dignissim sit amet neque ac mattis. Aenean commodo, tellus commodo dictum pulvinar, odio purus vestibulum nunc, in faucibus lorem mi ut neque. 
+			                                                          	</div>
+			                                                        </td>
+			                                                    </tr>
+			                                                </table>
+                                            				</td>
+                                     				</tr>
+                                     		</table>
+                                     	</td>
+  
+                                      </tr>
+                                      <tr mc:repeatable mc:variant="1x260 Right" class="templateColumn column">
+                                     	<td style="padding: 0;">
+                                     		<table style="width:100%; border-top: 1px solid #fff;">
+                                     			<tr>
+                                     				<td align="left" valign="top" style="padding: 20px;">
+                                     					<table align="left" border="0" cellpadding="0" cellspacing="0" class="templateColumnContainer">
+			                                                    <tr>
+			                                                    	<td valign="top" class="rightColumnContent columnContent">
+			                                                            <h3 mc:edit="right_column_title" mc:hideable>Lorem ipsum dolor sit amet</h3>
+			                                                            <div class="body-section" mc:edit="right_column_body"> 
+				                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac ipsum a dolor venenatis sodales. Ut sed mollis quam, non lobortis magna. Ut risus mauris, posuere in tortor id, lobortis congue magna. Morbi cursus dictum dolor sed venenatis. Donec dignissim sit amet neque ac mattis. Aenean commodo, tellus commodo dictum pulvinar, odio purus vestibulum nunc, in faucibus lorem mi ut neque. 
+			                                                          	</div>
+			                                                        </td>
+			                                                    </tr>
+			                                                </table>
+                                            				<table align="right" border="0" cellpadding="0" cellspacing="0" class="templateColumnContainer">
+			                                                	<tr>
+			                                                    	<td class="leftColumnContent columnContent columnImageContent">
+			                                                        	<img src="http://placehold.it/260x250" style="max-width:260px;" class="columnImage" mc:label="left_column_image" mc:edit="left_column_image" mc:hideable/>
+			                                                        </td>
+			                                                    </tr>
+                                                			</table>
+			                                            	
+                                            				</td>
+                                     				</tr>
+                                     		</table>
+                                     	</td>
+  
+                                      </tr>
+                                      <tr mc:repeatable mc:variant="1x360" class="fullWidthTemplateColumn column">
+                                        	<td valign="top" class="fullWidthTemplateColumnContainer">
+                                            	<table  border="0" cellpadding="0" cellspacing="0" class="fullWidthTable">
                                                 	<tr>
-                                                    	<td class="leftColumnContent columnContent columnImageContent">
-                                                        	<img src="http://placehold.it/260x250" style="max-width:260px;" class="columnImage" mc:label="left_column_image" mc:edit="left_column_image" mc:hideable/>
+                                                    	<td class="columnContent singleColumnImage fullWidthImageContent ">
+                                                        	<img src="http://placehold.it/360x250" style="max-width:100%; margin: 0 auto;" mc:label="left_column_image" mc:edit="center_column_image" mc:hideable/>
                                                         </td>
                                                     </tr>
-                                                </table>
-                                            	<table align="right" border="0" cellpadding="0" cellspacing="0" class="templateColumnContainer">
                                                     <tr>
-                                                    	<td valign="top" class="rightColumnContent columnContent">
-                                                            <h3 mc:edit="right_column_title" mc:hideable>Lorem ipsum dolor sit amet</h3>
-                                                            <div class="body-section" mc:edit="right_column_body"> 
-	                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac ipsum a dolor venenatis sodales. Ut sed mollis quam, non lobortis magna. Ut risus mauris, posuere in tortor id, lobortis congue magna. Morbi cursus dictum dolor sed venenatis. Donec dignissim sit amet neque ac mattis. Aenean commodo, tellus commodo dictum pulvinar, odio purus vestibulum nunc, in faucibus lorem mi ut neque. 
-                                                          	</div>
+                                                    	<td valign="top" class="leftColumnContent fullWidthBodyContent">
+                                                            <h3 mc:edit="center_column_title" mc:hideable>Lorem ipsum dolor sit amet</h3>
+                                                            <div class="body-section" mc:edit="center_column_body"> 
+                                                            	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac ipsum a dolor venenatis sodales. Ut sed mollis quam, non lobortis magna. Ut risus mauris, posuere in tortor id, lobortis congue magna. Morbi cursus dictum dolor sed venenatis. Donec dignissim sit amet neque ac mattis. Aenean commodo, tellus commodo dictum pulvinar, odio purus vestibulum nunc, in faucibus lorem mi ut neque. 
+                                                            </div>
                                                         </td>
                                                     </tr>
                                                 </table>
                                             </td>
                                       </tr>
-                                      <tr mc:repeatable mc:variant="1x260 right">
-                                        	<td align="left" valign="top" style="padding-bottom:0;">
-                                        		<table align="right" border="0" cellpadding="0" cellspacing="0" class="templateColumnContainer">
-                                                    <tr>
-                                                    	<td valign="top" class="rightColumnContent columnContent">
-                                                            <h3 mc:edit="right_column_title" mc:hideable>Lorem ipsum dolor sit amet</h3>
-                                                            <div class="body-section" mc:edit="right_column_body"> 
-	                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac ipsum a dolor venenatis sodales. Ut sed mollis quam, non lobortis magna. Ut risus mauris, posuere in tortor id, lobortis congue magna. Morbi cursus dictum dolor sed venenatis. Donec dignissim sit amet neque ac mattis. Aenean commodo, tellus commodo dictum pulvinar, odio purus vestibulum nunc, in faucibus lorem mi ut neque. 
-                                                          	</div>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            	<table align="left" border="0" cellpadding="0" cellspacing="0" class="templateColumnContainer">
-                                                	<tr>
-                                                    	<td class="leftColumnContent columnContent columnImageContent">
-                                                        	<img src="http://placehold.it/260x250" style="max-width:260px;" class="columnImage" mc:label="left_column_image" mc:edit="left_column_image" mc:hideable/>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            	
-                                            </td>
-                                      </tr>
-
-                                      <tr mc:repeatable mc:variant="1x360 right">
-                                        	<td align="left" valign="top" style="padding-bottom:0;">
-                                        		<table align="right" border="0" cellpadding="0" cellspacing="0" class="templateColumnContainer templateColumnContainerText360">
-                                             	<tr>
-                                                    	<td valign="top" class="rightColumnContent columnContent">
-                                                            <h3 mc:edit="right_column_title" mc:hideable>Lorem ipsum dolor sit amet</h3>
-                                                            <div class="body-section" mc:edit="right_column_body"> 
-	                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac ipsum a dolor venenatis sodales. Ut sed mollis quam, non lobortis magna. Ut risus mauris, posuere in tortor id, lobortis congue magna. Morbi cursus dictum dolor sed venenatis. Donec dignissim sit amet neque ac mattis. Aenean commodo, tellus commodo dictum pulvinar, odio purus vestibulum nunc, in faucibus lorem mi ut neque. 
-                                                          	</div>
-                                                        </td>
-                                                    </tr>
-                                                </table> 
-                                            	<table align="left" border="0" valign="middle" cellpadding="0" cellspacing="0" class="templateColumnContainer templateColumnContainerImage360">
-                                                	<tr>
-                                                    	<td class="leftColumnContent columnContent columnImageContent ">
-                                                        	<img src="http://placehold.it/360x250" style="max-width:360px !important;" class="columnImage" mc:label="left_column_image" mc:edit="left_column_image" mc:hideable/>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            	
-                                            </td>
-                                      </tr>
-
-                                      <tr mc:repeatable mc:variant="1x360 left">
-                                        	<td align="left" valign="top" style="padding-bottom:0;">
-
-                                        		<table align="right" border="0" valign="middle" cellpadding="0" cellspacing="0" class="templateColumnContainer templateColumnContainerImage360">
-                                                	<tr>
-                                                    	<td class="leftColumnContent columnContent columnImageContent ">
-                                                        	<img src="http://placehold.it/360x250" style="max-width:360px !important;" class="columnImage" mc:label="left_column_image" mc:edit="left_column_image" mc:hideable/>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                        		<table align="left" border="0" cellpadding="0" cellspacing="0" class="templateColumnContainer templateColumnContainerText360">
-                                             	<tr>
-                                                    	<td valign="top" class="rightColumnContent columnContent">
-                                                            <h3 mc:edit="right_column_title" mc:hideable>Lorem ipsum dolor sit amet</h3>
-                                                            <div class="body-section" mc:edit="right_column_body"> 
-	                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac ipsum a dolor venenatis sodales. Ut sed mollis quam, non lobortis magna. Ut risus mauris, posuere in tortor id, lobortis congue magna. Morbi cursus dictum dolor sed venenatis. Donec dignissim sit amet neque ac mattis. Aenean commodo, tellus commodo dictum pulvinar, odio purus vestibulum nunc, in faucibus lorem mi ut neque. 
-                                                          	</div>
-                                                        </td>
-                                                    </tr>
-                                                </table> 
-                                            	
-                                            	
-                                            </td>
-                                      </tr>
+                                     
+                                    
                                     </table>
                                     <!-- // END COLUMNS -->
                                 </td>
                             </tr>
-                        	<tr>
+                        	<tr class="border-color border-left border-right border-bottom">
                             	<td align="center" valign="top">
                                 	<!-- BEGIN FOOTER // -->
                                     <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateFooter">
                                         <tr>
-                                            <td valign="top" class="footerContent" mc:edit="footer_content00">
-                                                <a href="*|TWITTER:PROFILEURL|*">Follow on Twitter</a>&nbsp;&nbsp;&nbsp;<a href="*|FACEBOOK:PROFILEURL|*">Friend on Facebook</a>&nbsp;&nbsp;&nbsp;<a href="*|FORWARD|*">Forward to Friend</a>&nbsp;
+                                            <td valign="top" class="footerContent"  style="text-align: center" mc:edit="footer_content00">
+                                                <a href="*|TWITTER:PROFILEURL|*">
+                                                	<img src="https://dl.dropboxusercontent.com/u/11254480/email/twitter.png" />
+                                                </a>
+                                                &nbsp;&nbsp;&nbsp;
+                                                <a href="*|FACEBOOK:PROFILEURL|*">
+                                                	<img src="https://dl.dropboxusercontent.com/u/11254480/email/facebook.png" />
+                                                </a>&nbsp;&nbsp;&nbsp;
+                                                <a href="*|FORWARD|*">
+                                                	<img src="https://dl.dropboxusercontent.com/u/11254480/email/main.png" />
+                                                </a>&nbsp;
                                             </td>
                                         </tr>
                                         <tr>
