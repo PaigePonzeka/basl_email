@@ -22,24 +22,30 @@
 
 			/* ========== Page Styles ========== */
 
-			#bodyCell{padding:20px;}
 			#templateContainer{width:600px;}
 
 			/**
-			* @tab Page
-			* @section background style
-			* @tip Set the background color and top border for your email. You may want to choose colors that match your company's branding.
+			* @tab Design
+			* @section Page style
+			* @tip Set the background color and background image for your email HINT: use a repeatable pattern
 			* @theme page
 			*/
-			body, #bodyTable{
+			#bodyCell{
 				/*@editable*/ background-color:#DEE0E2;
-				/*@editable*/ background-image: url('https://dl.dropboxusercontent.com/u/11254480/email/email-bg.png');
+				/*@editable*/ background-image: url('https://gallery.mailchimp.com/cc39b8619665e2833adc139a8/images/grasstexture.1.jpg');
 				/*@editable*/ background-repeat: repeat;
 			}
 
+
+			/**
+			* @tab Design
+			* @section Body Border
+			* @tip Set the border color of the newsletter content
+			* @theme page
+			*/
 			.border-color {
-				/*@editable*/ border-color: #F3F315;
-				/*@editable*/ border-size: 3px;
+				/*@editable*/ border-color: #666;
+				/*@editable*/ border-size: 5px;
 			}
 
 			.border-top {
@@ -57,33 +63,50 @@
 			.border-right {
 				border-right-style: solid;
 			}
+
+
 			/**
-			* @tab Page
-			* @section background style
-			* @tip Set the background color and top border for your email. You may want to choose colors that match your company's branding.
-			* @theme page
+			* @tab font
+			* @section main
+			* @tip "In This Edition of the Inside" Main Font
+			* @style heading 1
 			*/
-			#bodyCell{
-				/*@editable*/ border-top:4px solid #BBBBBB;
+			h1.main-font {
+				/*@editable*/ color:#666 !important;
+				/*@editable*/ font-family:Helvetica;
+				/*@editable*/ font-size:26px;
+				/*@editable*/ font-style:normal;
+				/*@editable*/ font-weight:bold;
+				/*@editable*/ line-height:100%;
+				/*@editable*/ letter-spacing:normal;
+				/*@editable*/ text-align:left;
 			}
 
 			/**
-			* @tab Page
-			* @section email border
-			* @tip Set the border for your email.
+			* @tab font
+			* @section main
+			* @tip Date Font
+			* @style heading 3
 			*/
-			#templateContainer{
-				border-top: none;
+			h3.newsletter-date {
+				/*@editable*/ color:#666 !important;
+				/*@editable*/ font-family:Helvetica;
+				/*@editable*/ font-size:26px;
+				/*@editable*/ font-style:normal;
+				/*@editable*/ font-weight:bold;
+				/*@editable*/ line-height:100%;
+				/*@editable*/ letter-spacing:normal;
+				/*@editable*/ text-align:left;
 			}
 
 			/**
-			* @tab Page
-			* @section heading 1
-			* @tip Set the styling for all first-level headings in your emails. These should be the largest of your headings.
+			* @tab font
+			* @section heading
+			* @tip all h1 fonts
 			* @style heading 1
 			*/
 			h1{
-				/*@editable*/ color:#202020 !important;
+				/*@editable*/ color:#666 !important;
 				display:block;
 				/*@editable*/ font-family:Helvetica;
 				/*@editable*/ font-size:26px;
@@ -99,10 +122,10 @@
 			}
 
 			/**
-			* @tab Page
-			* @section heading 2
-			* @tip Set the styling for all second-level headings in your emails.
-			* @style heading 2
+			* @tab font
+			* @section heading
+			* @tip all h2 fonts
+			* @style heading 2			
 			*/
 			h2{
 				/*@editable*/ color:#404040 !important;
@@ -121,9 +144,9 @@
 			}
 
 			/**
-			* @tab Page
+			* @tab font
 			* @section heading 3
-			* @tip Set the styling for all third-level headings in your emails.
+			* @tip all h3 fonts
 			* @style heading 3
 			*/
 			h3{
@@ -143,9 +166,9 @@
 			}
 
 			/**
-			* @tab Page
+			* @tab font
 			* @section heading 4
-			* @tip Set the styling for all fourth-level headings in your emails. These should be the smallest of your headings.
+			* @tip all h4 fonts
 			* @style heading 4
 			*/
 			h4{
@@ -165,71 +188,6 @@
 			}
 
 			/* ========== Header Styles ========== */
-
-			/**
-			* @tab Header
-			* @section preheader style
-			* @tip Set the background color and bottom border for your email's preheader area.
-			* @theme header
-			*/
-			#templatePreheader{
-				/*@editable*/ background-color:#F4F4F4;
-				/*@editable*/ border-bottom:1px solid #CCCCCC;
-			}
-
-			/**
-			* @tab Header
-			* @section preheader text
-			* @tip Set the styling for your email's preheader text. Choose a size and color that is easy to read.
-			*/
-			.preheaderContent{
-				/*@editable*/ color:#808080;
-				/*@editable*/ font-family:Helvetica;
-				/*@editable*/ font-size:10px;
-				/*@editable*/ line-height:125%;
-				/*@editable*/ text-align:left;
-			}
-
-			/**
-			* @tab Header
-			* @section preheader link
-			* @tip Set the styling for your email's preheader links. Choose a color that helps them stand out from your text.
-			*/
-			.preheaderContent a:link, .preheaderContent a:visited, /* Yahoo! Mail Override */ .preheaderContent a .yshortcuts /* Yahoo! Mail Override */{
-				/*@editable*/ color:#606060;
-				/*@editable*/ font-weight:normal;
-				/*@editable*/ text-decoration:underline;
-			}
-
-			/**
-			* @tab Header
-			* @section header text
-			* @tip Set the styling for your email's header text. Choose a size and color that is easy to read.
-			*/
-			.headerContent{
-				/*@editable*/ color:#505050;
-				/*@editable*/ font-family:Helvetica;
-				/*@editable*/ font-size:20px;
-				/*@editable*/ font-weight:bold;
-				/*@editable*/ line-height:100%;
-				/*@editable*/ padding-top:0;
-				/*@editable*/ padding-right:0;
-				/*@editable*/ padding-bottom:0;
-				/*@editable*/ padding-left:0;
-				/*@editable*/ text-align:left;
-				/*@editable*/ vertical-align:middle;
-			}
-
-			/**
-			* @tab Header
-			* @section header link
-			* @tip Set the styling for your email's header links. Choose a color that helps them stand out from your text.
-			*/
-			.headerContent a:link, .headerContent a:visited, /* Yahoo! Mail Override */ .headerContent a .yshortcuts /* Yahoo! Mail Override */{
-				/*@editable*/ color:#EB4102;
-				/*@editable*/ font-weight:normal;
-				/*@editable*/ text-decoration:underline;
-			}
 
 			#headerImage{
 				height:auto;
@@ -304,14 +262,12 @@
 			*/
 			#templateColumns{
 				/*@editable*/ background-color:#F4F4F4;
-				/*@editableborder-top:1px solid #FFFFFF;*/
 				/*@editable*/ border-bottom:1px solid #CCCCCC;
 			}
 
 			.templateColumn,
 			.column {
 				/*@editable*/ border-bottom:1px solid #CCCCCC;
-				/*border-collapse: seperate !important;*/
 			}
 
 			.fullWidthTable {
@@ -475,6 +431,7 @@
 				#templateContainer{
 					max-width:600px !important;
 					/*@editable*/ width:100% !important;
+					background: #f4f4f4;
 				}
 
 
@@ -519,8 +476,6 @@
 				}
 
 				/* ======== Header Styles ======== */
-
-				#templatePreheader{display:none !important;} /* Hide the template preheader to save space */
 
 				/**
 				* @tab Mobile Styles
@@ -651,8 +606,8 @@
                                     <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody">
                                         <tr>
                                             <td valign="top" class="bodyContent">
-                                                <h1 mc:edit="email_title" mc:hideable>In This Edition of the Inside Pitch</h1>
-                                                <h3 mc:edit="email_subtitle" mc:hideable>November 2013</h3>
+                                                <h1 mc:edit="email_title" mc:hideable class="main-font">In This Edition of the Inside Pitch</h1>
+                                                <h3 mc:edit="email_subtitle" mc:hideable class="newsletter-date">November 2013</h3>
                                                 <p mc:edit="email_body" mc:hideable> Some more new and tidbits from around the Big Apple Softball League brought to you monthly! </p>
                                             </td>
                                         </tr>
